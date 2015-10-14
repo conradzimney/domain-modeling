@@ -8,28 +8,9 @@
 
 import Foundation
 
-class Money {
-    
-}
+/* * * * * * * * TESTING * * * * * * */
 
-class Job {
-    
-}
 
-class Person {
-    var firstName : String
-    var lastName : String
-    var age : Int
-    var job : Job?
-    
-    init(firstName : String, lastName : String, age : Int, job : Job) {
-        self.firstName = firstName
-        self.lastName = lastName
-        self.age = age
-        self.job = job
-    }
-}
 
-class Family {
-    
-}
+
+
