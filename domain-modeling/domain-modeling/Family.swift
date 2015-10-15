@@ -15,13 +15,10 @@ class Family {
     var legal : Bool
     
     // Initializer
-    init(members : Person...) {
-        self.members = [Person]()
+    init(members : [Person]) {
+        self.members = members
         self.legal = false
-        var i : Int = 0
         for member in members {
-            self.members[i] = member
-            i++
             if member.age >= 21 {
                 legal = true
             }
@@ -41,8 +38,8 @@ class Family {
         return sum
     }
     
-    func haveChild() {
-        members[members.count] = Person(firstName: "Baby", lastName: "Newborn", age: 0)
+    func haveChild(firstName : String, lastName : String) {
+        members.append(Person(firstName:  firstName, lastName: lastName, age: 0))
     }
     
 }

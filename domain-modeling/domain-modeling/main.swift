@@ -66,6 +66,22 @@ print("")
 
 /* * * * * * * * TESTING FAMILY * * * * * * */
 
+var person1 = Person(firstName: "Dave", lastName: "Smith", age: 21, job: job)
+var person2 = Person(firstName: "Lisa", lastName: "Smith", age: 23, job: Job(title: "Mom", hourlySalary: 30.0))
+var person3 = Person(firstName: "Billy", lastName: "Smith", age: 5)
+var members = [person1, person2, person3]
+var family = Family(members: members)
+
+print("The Smith's household income is \(family.houseHoldIncome())")
+print("Members of the family are:")
+for member in family.members {
+    print("\(member.firstName) \(member.lastName)")
+}
+family.haveChild("Jane", lastName: "Smith")
+print("After having a child, members of the family are now:")
+for member in family.members {
+    print("\(member.firstName) \(member.lastName)")
+}
 
 
 
