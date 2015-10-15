@@ -8,7 +8,64 @@
 
 import Foundation
 
-/* * * * * * * * TESTING * * * * * * */
+/* * * * * * * * TESTING MONEY * * * * * * */
+
+var money1 = Money(amount: 10.50, currency: "US")
+var money2 = Money(amount: 34.23, currency: "CAN")
+var money3 = Money(amount: 12.46, currency: "EUR")
+var money4 = Money(amount: 67.00, currency: "GBP")
+
+var badMoney = Money(amount: 50.00, currency: "BAD")
+
+print("Money 1 has \(money1.amount) in \(money1.currency)")
+print("Money 2 has \(money2.amount) in \(money2.currency)")
+print("Money 3 has \(money3.amount) in \(money3.currency)")
+print("Money 4 has \(money4.amount) in \(money4.currency)")
+
+print("Adding 10.0 of different currencies to each money:")
+money1.add(10.0, addedCurrency: "CAN")
+money2.add(10.0, addedCurrency: "EUR")
+money3.add(10.0, addedCurrency: "GBP")
+money4.add(10.0, addedCurrency: "US")
+
+print("Money 1 now has \(money1.amount) in \(money1.currency)")
+print("Money 2 now has \(money2.amount) in \(money2.currency)")
+print("Money 3 now has \(money3.amount) in \(money3.currency)")
+print("Money 4 now has \(money4.amount) in \(money4.currency)")
+
+print("Subtracting 5.0 of different currencies to each money:")
+money1.subtract(5.0, subtractedCurrency: "EUR")
+money2.subtract(5.0, subtractedCurrency: "GBP")
+money3.subtract(5.0, subtractedCurrency: "US")
+money4.subtract(5.0, subtractedCurrency: "CAN")
+
+print("Money 1 now has \(money1.amount) in \(money1.currency)")
+print("Money 2 now has \(money2.amount) in \(money2.currency)")
+print("Money 3 now has \(money3.amount) in \(money3.currency)")
+print("Money 4 now has \(money4.amount) in \(money4.currency)")
+print("")
+
+/* * * * * * * * TESTING JOB * * * * * * */
+
+var job = Job(title: "IT Guy", hourlySalary: 50.0)
+print("Job is \(job.title) and makes \(job.salary) per hour, or \(job.calculateIncome(2000)) in 2000 hours.")
+job.raise(0.08)
+print("After an 8% raise, the job makes \(job.calculateIncome(2000)) in 2000 hours.")
+print("")
+
+/* * * * * * * * TESTING PERSON * * * * * * */
+
+var bryan = Person(firstName: "Bryan", lastName: "Gula", age: 22, job: Job(title: "TA", hourlySalary: 15.0),
+    spouse : Person(firstName: "Swift", lastName: "Swiftly" , age: 1))
+print("This is a peron in string form: \n\(bryan.toString())")
+print("This is what happens when you try to create a Person with a job who is younger than 16:")
+var youngerPerson = Person(firstName: "Too", lastName: "Young", age: 15, job: Job(title: "Blah", hourlySalary: 1.0))
+print("This is what happens when you try to create a Person with a spouse who is younger than 18:")
+var youngPerson = Person(firstName: "Too", lastName: "Young", age: 15, spouse : Person(firstName: "Too", lastName: "Young", age: 30))
+print("")
+
+/* * * * * * * * TESTING FAMILY * * * * * * */
+
 
 
 

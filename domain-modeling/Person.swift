@@ -16,20 +16,24 @@ class Person {
     var age : Int
     var job : Job?
     var spouse : Person?
+    var legal : Bool
     
     // Initializer
     init(firstName : String, lastName : String, age : Int, job : Job? = nil, spouse : Person? = nil) {
         self.firstName = firstName
         self.lastName = lastName
         self.age = age
-        if age >= 16 {
+        self.legal = true
+        if age >= 16 && job != nil {
             self.job = job!
-        } else {
+        } else if job != nil {
+            self.legal = false
             print("Must be at least 16 to have a job.")
         }
-        if age >= 18 {
+        if age >= 18 && spouse != nil {
             self.spouse = spouse!
-        } else {
+        } else if spouse != nil {
+            self.legal = false
             print("Must be at least 18 to have a spouse.")
         }
     }

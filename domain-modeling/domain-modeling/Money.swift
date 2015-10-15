@@ -11,8 +11,8 @@ import Foundation
 class Money {
     
     // Properties
-    private var amount : Double
-    private var currency : String
+    var amount : Double
+    var currency : String
     
     // Initializer
     init(amount : Double, currency : String) {
