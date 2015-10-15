@@ -82,6 +82,9 @@ print("After having a child, members of the family are now:")
 for member in family.members {
     print("\(member.firstName) \(member.lastName)")
 }
+print("What happens when you create a family where no one is at least 21?")
+family = Family(members: [person3])
+
 
 
 

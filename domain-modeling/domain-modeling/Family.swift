@@ -23,17 +23,22 @@ class Family {
                 legal = true
             }
         }
+        if !legal {
+            print("This family is not legal.")
+        }
     }
     
     // Methods
     func houseHoldIncome() -> Double {
-        if legal {
+        if !legal {
             print("This family is not legal.")
             return 0.0
         }
         var sum = 0.0
         for member in members {
-            sum += member.job!.calculateIncome(2000)
+            if member.job != nil {
+                sum += member.job!.calculateIncome(2000)
+            }
         }
         return sum
     }
