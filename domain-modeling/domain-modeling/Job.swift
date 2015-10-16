@@ -13,16 +13,22 @@ class Job {
     // Properties
     var title : String
     var salary : Double
+    var hourlyOrYearly : String
     
     // Initializer
-    init(title : String, hourlySalary : Double) {
+    init(title : String, salary : Double, hourlyOrYearly : String) {
         self.title = title
-        self.salary = hourlySalary
+        self.salary = salary
+        self.hourlyOrYearly = hourlyOrYearly
     }
     
     // Methods
     func calculateIncome(hours : Int) -> Double {
-        return salary * Double(hours)
+        if hourlyOrYearly == "hourly" {
+            return salary * Double(hours)
+        } else {
+            return salary
+        }
     }
     
     func raise(percentRaise : Double) {

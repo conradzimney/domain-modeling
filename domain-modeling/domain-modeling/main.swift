@@ -47,7 +47,7 @@ print("")
 
 /* * * * * * * * TESTING JOB * * * * * * */
 
-var job = Job(title: "IT Guy", hourlySalary: 50.0)
+var job = Job(title: "IT Guy", salary: 50.0, hourlyOrYearly : "hourly")
 print("Job is \(job.title) and makes \(job.salary) per hour, or \(job.calculateIncome(2000)) in 2000 hours.")
 job.raise(0.08)
 print("After an 8% raise, the job makes \(job.calculateIncome(2000)) in 2000 hours.")
@@ -55,11 +55,11 @@ print("")
 
 /* * * * * * * * TESTING PERSON * * * * * * */
 
-var bryan = Person(firstName: "Bryan", lastName: "Gula", age: 22, job: Job(title: "TA", hourlySalary: 15.0),
+var bryan = Person(firstName: "Bryan", lastName: "Gula", age: 22, job: Job(title: "TA", salary: 15.0, hourlyOrYearly : "hourly"),
     spouse : Person(firstName: "Swift", lastName: "Swiftly" , age: 1))
 print("This is a peron in string form: \n\(bryan.toString())")
 print("This is what happens when you try to create a Person with a job who is younger than 16:")
-var youngerPerson = Person(firstName: "Too", lastName: "Young", age: 15, job: Job(title: "Blah", hourlySalary: 1.0))
+var youngerPerson = Person(firstName: "Too", lastName: "Young", age: 15, job: Job(title: "Blah", salary: 1.0, hourlyOrYearly : "hourly"))
 print("This is what happens when you try to create a Person with a spouse who is younger than 18:")
 var youngPerson = Person(firstName: "Too", lastName: "Young", age: 15, spouse : Person(firstName: "Too", lastName: "Young", age: 30))
 print("")
@@ -67,7 +67,7 @@ print("")
 /* * * * * * * * TESTING FAMILY * * * * * * */
 
 var person1 = Person(firstName: "Dave", lastName: "Smith", age: 21, job: job)
-var person2 = Person(firstName: "Lisa", lastName: "Smith", age: 23, job: Job(title: "Mom", hourlySalary: 30.0))
+var person2 = Person(firstName: "Lisa", lastName: "Smith", age: 23, job: Job(title: "Mom", salary: 30.0, hourlyOrYearly : "hourly"))
 var person3 = Person(firstName: "Billy", lastName: "Smith", age: 5)
 var members = [person1, person2, person3]
 var family = Family(members: members)
