@@ -13,19 +13,22 @@ class Job {
     // Properties
     var title : String
     var salary : Double
-    var hourlyOrYearly : String
+    var hourly : Bool
     
     // Initializer
-    init(title : String, salary : Double, hourlyOrYearly : String) {
+    init(title : String, salary : Double, hourly : Bool) {
         self.title = title
         self.salary = salary
-        self.hourlyOrYearly = hourlyOrYearly
+        self.hourly = hourly
     }
     
     // Methods
-    func calculateIncome(hours : Int) -> Double {
-        if hourlyOrYearly == "hourly" {
-            return salary * Double(hours)
+    func calculateIncome(hours : Int?) -> Double {
+        if hourly {
+            return salary * Double(hours!)
+        } else if hourly && hours != nil {
+            print("Please enter number of hours worked for hourly salary. Function will now return zero.")
+            return 0.0
         } else {
             return salary
         }
