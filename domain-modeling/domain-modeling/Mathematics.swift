@@ -7,3 +7,10 @@
 //
 
 import Foundation
+
+protocol Mathematics {
+    
+    mutating func add(other: Money) -> Void
+    mutating func subtract(other: Money) -> Void
+    
+}

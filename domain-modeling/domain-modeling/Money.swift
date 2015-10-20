@@ -8,22 +8,6 @@
 
 import Foundation
 
-protocol Mathematics {
-    
-    mutating func add(other: Money) -> Void
-    mutating func subtract(other: Money) -> Void
-    
-}
-
-extension Double {
-    
-    var USD : Money { return Money(amount: self, currency: "US") }
-    var CAN : Money { return Money(amount: self, currency: "CAN") }
-    var EUR : Money { return Money(amount: self, currency: "EUR") }
-    var GBP : Money { return Money(amount: self, currency: "GBP") }
-    
-}
-
 class Money : CustomStringConvertible, Mathematics {
     
     // Properties

@@ -91,13 +91,67 @@ print("")
 /* * * * * * TESTING NEW FUNCTIONALITIES * * * * * * */
 /* * * * * * * * * * * * * * * * * * * * * * * * * * */
 
+print("Testing Tuesday (10/20/15) additions: ")
+print("")
 
+/* * * * * * * * TESTING CustomStringConvertible Implementation * * * * * * */
+
+print("Testing CustomStringConvertible implementation:")
 print(money1.description)
 print(job.description)
 print(bryan.description)
 print(family.description)
+print("")
 
+/* * * * * * * * TESTING Mathematics Protocol * * * * * * */
 
+print("Testing Mathematics protocol implementation:")
+
+print("Money 1 has \(money1.amount) in \(money1.currency)")
+print("Money 2 has \(money2.amount) in \(money2.currency)")
+print("Money 3 has \(money3.amount) in \(money3.currency)")
+print("Money 4 has \(money4.amount) in \(money4.currency)")
+
+print("Adding Money objects to each other:")
+money1.add(money2)
+money2.add(money3)
+money3.add(money4)
+money4.add(money1)
+
+print("Money 1 now has \(money1.amount) in \(money1.currency)")
+print("Money 2 now has \(money2.amount) in \(money2.currency)")
+print("Money 3 now has \(money3.amount) in \(money3.currency)")
+print("Money 4 now has \(money4.amount) in \(money4.currency)")
+
+print("Subtracting Money objects from each other:")
+money1.subtract(money2)
+money2.subtract(money3)
+money3.subtract(money4)
+money4.subtract(money1)
+
+print("Money 1 now has \(money1.amount) in \(money1.currency)")
+print("Money 2 now has \(money2.amount) in \(money2.currency)")
+print("Money 3 now has \(money3.amount) in \(money3.currency)")
+print("Money 4 now has \(money4.amount) in \(money4.currency)")
+print("")
+
+/* * * * * * * * TESTING Double Extension for Money * * * * * * */
+
+print("Creating Doubles and calling their newly implemented methods: ")
+var d1 : Double = 10.0
+var d2 : Double = 10.0
+var d3 : Double = 10.0
+var d4 : Double = 10.0
+
+var m1 : Money = d1.USD
+var m2 : Money = d2.CAN
+var m3 : Money = d3.EUR
+var m4 : Money = d4.GBP
+
+print("\(m1)")
+print("\(m2)")
+print("\(m3)")
+print("\(m4)")
 
 
 

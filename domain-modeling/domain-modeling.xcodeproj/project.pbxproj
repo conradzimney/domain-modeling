@@ -13,6 +13,7 @@
 		CE34612E1BCDF989002586AA /* Job.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE34612D1BCDF989002586AA /* Job.swift */; settings = {ASSET_TAGS = (); }; };
 		CE3461301BCDF993002586AA /* Family.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE34612F1BCDF993002586AA /* Family.swift */; settings = {ASSET_TAGS = (); }; };
 		CE8F0DBA1BD597690045E573 /* Mathematics.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8F0DB91BD597690045E573 /* Mathematics.swift */; settings = {ASSET_TAGS = (); }; };
+		CE8F0DBC1BD5DE3C0045E573 /* DoubleExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8F0DBB1BD5DE3C0045E573 /* DoubleExtension.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -35,6 +36,7 @@
 		CE34612D1BCDF989002586AA /* Job.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Job.swift; sourceTree = "<group>"; };
 		CE34612F1BCDF993002586AA /* Family.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Family.swift; sourceTree = "<group>"; };
 		CE8F0DB91BD597690045E573 /* Mathematics.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Mathematics.swift; sourceTree = "<group>"; };
+		CE8F0DBB1BD5DE3C0045E573 /* DoubleExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DoubleExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +70,7 @@
 			isa = PBXGroup;
 			children = (
 				CE3461291BCDF965002586AA /* Money.swift */,
+				CE8F0DBB1BD5DE3C0045E573 /* DoubleExtension.swift */,
 				CE34612D1BCDF989002586AA /* Job.swift */,
 				CE34612B1BCDF977002586AA /* Person.swift */,
 				CE34612F1BCDF993002586AA /* Family.swift */,
@@ -138,6 +141,7 @@
 				CE34612C1BCDF977002586AA /* Person.swift in Sources */,
 				CE34612A1BCDF965002586AA /* Money.swift in Sources */,
 				CE3461211BCDF00B002586AA /* main.swift in Sources */,
+				CE8F0DBC1BD5DE3C0045E573 /* DoubleExtension.swift in Sources */,
 				CE34612E1BCDF989002586AA /* Job.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
