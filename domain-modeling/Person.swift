@@ -8,7 +8,7 @@
 
 import Foundation
 
-class Person {
+class Person : CustomStringConvertible {
     
     // Properties
     var firstName : String
@@ -17,6 +17,7 @@ class Person {
     var job : Job?
     var spouse : Person?
     var legal : Bool
+    var description : String
     
     // Initializer
     init(firstName : String, lastName : String, age : Int, job : Job? = nil, spouse : Person? = nil) {
@@ -36,6 +37,7 @@ class Person {
             self.legal = false
             print("Must be at least 18 to have a spouse.")
         }
+        self.description = firstName + " " + lastName
     }
     
     // Methods

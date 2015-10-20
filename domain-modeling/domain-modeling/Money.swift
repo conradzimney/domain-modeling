@@ -8,16 +8,34 @@
 
 import Foundation
 
-class Money {
+protocol Mathematics {
+    
+    mutating func add(other: Money) -> Void
+    mutating func subtract(other: Money) -> Void
+    
+}
+
+extension Double {
+    
+    var USD : Money { return Money(amount: self, currency: "US") }
+    var CAN : Money { return Money(amount: self, currency: "CAN") }
+    var EUR : Money { return Money(amount: self, currency: "EUR") }
+    var GBP : Money { return Money(amount: self, currency: "GBP") }
+    
+}
+
+class Money : CustomStringConvertible, Mathematics {
     
     // Properties
     var amount : Double
     var currency : String
+    var description : String
     
     // Initializer
     init(amount : Double, currency : String) {
         self.amount = amount
         self.currency = currency
+        self.description = currency + "\(amount)"
     }
     
     // Methods
@@ -81,6 +99,14 @@ class Money {
         let toSub = Money(amount: amount, currency: subtractedCurrency)
         toSub.convert(self.currency)
         self.amount -= toSub.amount
+    }
+    
+    func add(other: Money) {
+        add(other.amount, addedCurrency: other.currency)
+    }
+    
+    func subtract(other: Money) {
+        subtract(other.amount, subtractedCurrency: other.currency)
     }
     
 }

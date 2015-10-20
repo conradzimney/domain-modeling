@@ -8,18 +8,20 @@
 
 import Foundation
 
-class Job {
+class Job : CustomStringConvertible{
     
     // Properties
     var title : String
     var salary : Double
     var hourly : Bool
+    var description : String
     
     // Initializer
     init(title : String, salary : Double, hourly : Bool) {
         self.title = title
         self.salary = salary
         self.hourly = hourly
+        self.description = title + "\(salary)"
     }
     
     // Methods

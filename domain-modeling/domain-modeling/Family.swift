@@ -8,11 +8,12 @@
 
 import Foundation
 
-class Family {
+class Family : CustomStringConvertible {
     
     // Properties
     var members : [Person]
     var legal : Bool
+    var description : String
     
     // Initializer
     init(members : [Person]) {
@@ -26,6 +27,7 @@ class Family {
         if !legal {
             print("This family is not legal.")
         }
+        self.description = members.description
     }
     
     // Methods
